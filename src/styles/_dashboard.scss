@@ -1,0 +1,85 @@
+.dashboard {
+  overflow-y: auto;
+
+  .bar {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+    > input {
+      margin-right: auto;
+      @include inputStyle(100%, 1rem, 0);
+    }
+
+    > svg {
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+
+    > img {
+      @include sqaure(2rem);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+ .widgetContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem 2rem 2rem 0;
+
+    .widget{
+        width: 16rem;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.132);
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 0;
+        border-radius: 10px;
+
+        .widgetInfo{
+            >p{
+                opacity: 0.7;
+                font-size: 0.8rem;
+            }
+
+            >h4{
+                font-size: 1.5rem;
+            }
+
+            >span{
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+            }
+        }
+
+        .widgetCircle{
+            position: relative;
+            @include sqaure(5rem);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background:green;
+            &::before{
+                content: "";
+                position: absolute;
+                @include sqaure(4rem);
+                background-color: white;
+                border-radius: 100%;
+            }
+
+            span{
+                position: relative; 
+            }
+        }
+    }
+ }
+}
