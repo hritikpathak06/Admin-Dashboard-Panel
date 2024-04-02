@@ -16,3 +16,9 @@ export interface WidgetItemProps{
   color:string,
   amount?:boolean
 }
+
+export interface CategoryItemProps {
+  color: string;
+  value: number;
+  heading:string
+}

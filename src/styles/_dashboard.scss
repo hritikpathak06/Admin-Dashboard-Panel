@@ -25,7 +25,7 @@
     }
   }
 
- .widgetContainer{
+  .widgetContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,53 +33,161 @@
     gap: 2rem;
     padding: 2rem 2rem 2rem 0;
 
-    .widget{
-        width: 16rem;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0,0,0,0.132);
-        padding: 2rem;
+    .widget {
+      width: 16rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 0;
+      border-radius: 10px;
+
+      .widgetInfo {
+        > p {
+          opacity: 0.7;
+          font-size: 0.8rem;
+        }
+
+        > h4 {
+          font-size: 1.5rem;
+        }
+
+        > span {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+        }
+      }
+
+      .widgetCircle {
+        position: relative;
+        @include sqaure(5rem);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: green;
+        &::before {
+          content: "";
+          position: absolute;
+          @include sqaure(4rem);
+          background-color: white;
+          border-radius: 100%;
+        }
+
+        span {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .graphContainer {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    gap: 2rem;
+    padding: 0 2rem 2rem 0;
+
+    > div {
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .revenue-chart {
+      width: 100%;
+      padding: 1rem 3rem;
+
+      > h2 {
+        @include heading();
+        margin: 1rem 2rem 0.25rem;
+        text-align: center;
+      }
+    }
+
+    .dashboard-categories {
+      width: 100%;
+      max-width: 16rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+      padding-bottom: 2rem;
+      > h2 {
+        @include heading();
+        margin: 1.5rem 0 2rem 0;
+        text-align: center;
+      }
+
+      div {
+        overflow-y: auto;
+        padding-left: 0.5rem;
+      }
+
+      .category-item {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: stretch;
-        gap: 0;
-        border-radius: 10px;
+        gap: 0.2rem;
+        padding: 1rem;
+        align-items: center;
 
-        .widgetInfo{
-            >p{
-                opacity: 0.7;
-                font-size: 0.8rem;
-            }
+        > h5 {
+          letter-spacing: 1px;
+          font-weight: 300;
+          width: 60px;
+        }
+        > div {
+          margin-right: auto;
+          width: 6rem;
+          background-color: rgb(217, 217, 217);
+          border-radius: 20px;
+          height: 1rem;
 
-            >h4{
-                font-size: 1.5rem;
-            }
-
-            >span{
-                display: flex;
-                align-items: center;
-                gap: 0.2rem;
-            }
+          > div {
+            height: 100%;
+            border-radius: 20px;
+            margin-left: -10px;
+          }
         }
 
-        .widgetCircle{
-            position: relative;
-            @include sqaure(5rem);
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            background:green;
-            &::before{
-                content: "";
-                position: absolute;
-                @include sqaure(4rem);
-                background-color: white;
-                border-radius: 100%;
-            }
-
-            span{
-                position: relative; 
-            }
+        span {
+          font-size: 0.8rem;
+          font-weight: bold;
         }
+      }
     }
- }
+  }
+
+  .transactionContainer {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem 2rem 0;
+    height: 30rem;
+
+    > div {
+      background-color: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.132);
+      border-radius: 10px;
+    }
+
+    .gender-chart {
+      width: 100%;
+      max-width: 20rem;
+      padding: 1rem;
+      position: relative;
+      > h2 {
+        text-align: center;
+        margin: 1.5rem 0 2rem 0;
+        @include heading;
+      }
+
+      > p {
+        @include posCenter();
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.64);
+      }
+    }
+  }
 }
