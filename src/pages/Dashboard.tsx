@@ -9,6 +9,7 @@ import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import data from "../assets/data.json";
 import { BarChart, DoughnutChart } from "../components/Charts";
 import { BiMaleFemale } from "react-icons/bi";
+import DashboardTable from "../components/DashboardTable";
 
 const userImg =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsIlzGp1laQheiAAjrbJJ3pasHLjMBnIUEZg&usqp=CAU";
@@ -90,13 +91,14 @@ const Dashboard = () => {
               labels={["female", "male"]}
               data={[12, 25]}
               backgroundColor={["hsl(340,82%,56%)", "hsl(30,82%,56%)"]}
-              cutout={90}
+              // cutout=}
             />
             <p>
               <BiMaleFemale />
             </p>
           </div>
           {/* Table */}
+          <DashboardTable data={data.transaction}/>
         </section>
       </main>
     </div>

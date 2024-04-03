@@ -189,5 +189,17 @@
         color: rgba(0, 0, 0, 0.64);
       }
     }
+
+    .transactionBox {
+      width: 100%;
+      padding: 1rem;
+      overflow-x: auto;
+
+      h2 {
+        text-align: center;
+        margin: 1.5rem 0 0 0;
+        @include heading();
+      }
+    }
   }
 }
