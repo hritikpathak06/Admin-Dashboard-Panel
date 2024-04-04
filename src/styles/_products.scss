@@ -1,0 +1,22 @@
+.productContainer {
+  overflow-y: auto;
+
+  .dashboard-product-box {
+    background-color: white;
+    padding: 2rem;
+  }
+
+  .create-product-btn {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    @include sqaure(2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(201, 9, 9);
+    color: white;
+    opacity: 0.8;
+  }
+}
