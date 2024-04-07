@@ -84,6 +84,8 @@ export const BarChart = ({
   return <Bar options={options} data={data} />;
 };
 
+
+// Doughnut Chart Bar
 export const DoughnutChart = ({
   labels,
   data,

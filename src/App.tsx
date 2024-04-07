@@ -7,7 +7,10 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Products = lazy(() => import("./pages/Products"));
 const Customers = lazy(() => import("./pages/Customers"));
 const Transactions = lazy(() => import("./pages/Transactons"));
-const Home = lazy(() => import("./pages/Home"))
+const Home = lazy(() => import("./pages/Home"));
+const NewProduct = lazy(() => import("./pages/Spec/NewProduct"));
+const ManageProduct = lazy(() => import("./pages/Spec/ManageProduct"));
+const ManageTransaction = lazy(() => import("./pages/Spec/ManageTransaction"));
 
 
 const App = () => {
@@ -15,8 +18,8 @@ const App = () => {
     <>
       <Suspense fallback={<Loader />}>
         <Routes>
-        <Route path="/"  element={<Home/>} />
-          <Route path="/admin/dashboard"  element={<Dashboard />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
           <Route path="/admin/product" element={<Products />} />
           <Route path="/admin/transaction" element={<Transactions />} />
           <Route path="/admin/customer" element={<Customers />} />
@@ -24,6 +27,11 @@ const App = () => {
           {/* Charts Section */}
 
           {/* Apps */}
+
+     
+          <Route path="/admin/product/new" element={<NewProduct />} />
+          <Route path="/admin/product/:id" element={<ManageProduct />} />
+          <Route path="/admin/transaction/:id" element={<ManageTransaction />} />
         </Routes>
       </Suspense>
     </>

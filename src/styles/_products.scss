@@ -20,3 +20,66 @@
     opacity: 0.8;
   }
 }
+
+.managementContainer {
+  // display: flex;
+  // justify-content: center;
+  // align-items: unset;
+  // gap: 0.2rem;
+
+  > article {
+    margin: auto;
+    height: 85vh;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 5px 13px rgba($color: #000000, $alpha: 1);
+
+    > form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      > h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      > img {
+        @include sqaure(5rem);
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      > div {
+        width: 100%;
+        position: relative;
+        > label {
+          position: absolute;
+          left: 0;
+          top: -1.5rem;
+        }
+
+        > input {
+          padding: 1rem;
+          border: 1px solid rgba(13, 13, 13, 0.196);
+          width: 100%;
+        }
+      }
+      
+      >button{
+        padding: 1rem;
+        border: none;
+        background-color: rgb(5,107,224);
+        width: 100%;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
