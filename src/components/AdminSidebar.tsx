@@ -109,7 +109,7 @@ const Li = ({ url, text, location, Icon }: LiProps) => {
       <NavLink
         to={url}
         style={{
-          color: location.pathname.includes(url) ? "rgb(0,115,255)" : "unset",
+          color: location.pathname === url ? "rgb(0,115,255)" : "unset",
         }}
       >
         <Icon />
