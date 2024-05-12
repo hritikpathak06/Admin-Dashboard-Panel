@@ -6,10 +6,10 @@ import {
 } from "react-icons/ri";
 import { NavLink, useLocation } from "react-router-dom";
 import { LiProps } from "../@types/adminDashboardrTypes";
-import { FiBarChart } from "react-icons/fi";
-import { FaChartLine, FaChartPie } from "react-icons/fa";
-import { BsFillStopwatchFill } from "react-icons/bs";
-import { BiCoin, BiSolidOffer } from "react-icons/bi";
+// import { FiBarChart } from "react-icons/fi";
+// import { FaChartLine, FaChartPie } from "react-icons/fa";
+// import { BsFillStopwatchFill } from "react-icons/bs";
+// import { BiCoin, BiSolidOffer } from "react-icons/bi";
 
 const AdminSidebar = () => {
   const location = useLocation();
