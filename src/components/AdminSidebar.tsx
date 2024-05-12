@@ -46,7 +46,7 @@ const AdminSidebar = () => {
             />
           </ul>
         </div>
-        <div>
+        {/* <div>
           <h5>Charts</h5>
           <ul>
             <Li
@@ -68,8 +68,8 @@ const AdminSidebar = () => {
               location={location}
             />
           </ul>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <h5>Apps</h5>
           <ul>
             <Li
@@ -91,7 +91,7 @@ const AdminSidebar = () => {
               location={location}
             />
           </ul>
-        </div>
+        </div> */}
       </aside>
     </>
   );
